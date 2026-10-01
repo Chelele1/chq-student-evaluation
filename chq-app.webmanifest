@@ -1,0 +1,9 @@
+{
+  "name": "360Golf — Practice Log",
+  "short_name": "360Golf",
+  "display": "standalone",
+  "start_url": "./",
+  "scope": "./",
+  "background_color": "#f5f7f5",
+  "theme_color": "#0b5b4d"
+}
