@@ -1,9 +1,9 @@
 {
-  "name": "360Golf — Practice Log",
-  "short_name": "360Golf",
+  "name": "CHQ Student Evaluation",
+  "short_name": "CHQ Evaluation",
   "display": "standalone",
   "start_url": "./",
   "scope": "./",
   "background_color": "#f5f7f5",
-  "theme_color": "#0b5b4d"
+  "theme_color": "#163d32"
 }
