@@ -24,8 +24,10 @@ if (datos.app === 'CHQ_SWING_SIMPLE') return guardarSwingSimpleCHQ(datos);
 
 Si tu variable tiene otro nombre, usa ese nombre en los dos lugares de la línea. Conserva todas las rutas y funciones existentes para las otras prácticas.
 
-4. Guarda. En el selector de funciones elige **crearClaveCoachSwingCHQ** y ejecútala. Si solicita autorización, autoriza con tu cuenta del Sheet. El registro de ejecución muestra la clave del coach. Si ya existe `CHQ_COACH_KEY`, conserva esa misma clave. No publiques la clave en GitHub.
-5. Ve a **Implementar → Administrar implementaciones → lápiz → Nueva versión → Implementar**. Usa la implementación actual: la URL termina en `/exec` y se conserva. Debe ejecutarse como tú y permitir el acceso requerido por la app.
+4. Guarda con Ctrl + S.
+5. Ve a **Deploy → Manage deployments → lápiz → Version: New version → Deploy**. Usa la implementación actual para conservar la misma URL. Debe ejecutarse como tú y permitir el acceso requerido por la app.
+
+Esta versión no solicita clave. Conserva la validación de registros y la prevención de duplicados.
 
 El destino es el archivo de Sheets existente:
 https://docs.google.com/spreadsheets/d/180IUIA1jS9uNSPmiKMR1fZbK_xUZIaK9d3Fv5YErbRs/edit
@@ -44,7 +46,7 @@ No subas `SwingEvaluation.gs`, estas instrucciones ni `field-schema.json` a GitH
 
 ## 3. Probar el envío
 
-Abre https://chelele1.github.io/chq-student-evaluation/ y escribe una evaluación de prueba. En **Acceso del coach · Sheets** introduce tu clave. Solo el nombre y la fecha de evaluación son obligatorios; el ID del alumno se conserva automáticamente.
+Abre https://chelele1.github.io/chq-student-evaluation/ y escribe una evaluación de prueba. Solo el nombre y la fecha de evaluación son obligatorios; el ID del alumno se conserva automáticamente.
 
 Pulsa **Finalizar y enviar a Sheets** y comprueba la fila en **CHQ Swing - Evaluaciones**. La app confirma el guardado central únicamente cuando recibe la respuesta correcta del servidor. Si falla, conserva la evaluación local y permite reintentar.
 

@@ -6,10 +6,6 @@ function guardarSwingSimpleCHQ(datos) {
   function reply(value) {
     return ContentService.createTextOutput(JSON.stringify(value)).setMimeType(ContentService.MimeType.JSON);
   }
-  const expected = PropertiesService.getScriptProperties().getProperty('CHQ_COACH_KEY');
-  if (!expected || typeof datos.coachKey !== 'string' || datos.coachKey !== expected) {
-    return reply({ok:false,error:'Clave del coach incorrecta / Invalid coach key.'});
-  }
   const uuid = /^[a-zA-Z0-9-]{1,100}$/;
   if (datos.schemaVersion !== 1 || typeof datos.revisionId !== 'string' || !uuid.test(datos.revisionId) ||
       typeof datos.evaluationId !== 'string' || !uuid.test(datos.evaluationId) ||
@@ -70,16 +66,6 @@ function guardarSwingSimpleCHQ(datos) {
   } finally {
     lock.releaseLock();
   }
-}
-
-function crearClaveCoachSwingCHQ() {
-  const props = PropertiesService.getScriptProperties();
-  let key = props.getProperty('CHQ_COACH_KEY');
-  if (!key) {
-    key = Utilities.getUuid().replace(/-/g,'')+Utilities.getUuid().replace(/-/g,'');
-    props.setProperty('CHQ_COACH_KEY',key);
-  }
-  console.log('Clave del coach / Coach key: '+key);
 }
 
 // The build writes the exact bilingual field order here.
